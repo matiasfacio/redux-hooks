@@ -32,7 +32,7 @@ export const Room: VFC<RoomProps> = ({ roomName, date, onChange }) => {
               return (
                 <CalendarLine key={day.time}>
                   <DateTime status={day.state}>{day.time}</DateTime>
-                  <StatusOfTime status={day.state}>{day.state}</StatusOfTime>
+                  <StatusTag status={day.state}>{day.state}</StatusTag>
                   {day.state === "available" && (
                     <input
                       type="checkbox"
@@ -93,22 +93,28 @@ const CalendarLine = styled.div`
   }
 `;
 
-const StatusOfTime = styled.p<{ status: CalendarTime["state"] }>`
+const StatusTag = styled.p<{ status: CalendarTime["state"] }>`
     display: inline-block;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    padding: 0;
     ${({ status }) => {
       if (status === "pending") {
         return css`
-          color: yellow;
+          color: black;
+          background-color: yellow;
         `;
       }
       if (status === "available") {
         return css`
-          color: green;
+          background-color: green;
+          color: white;
         `;
       }
       if (status === "booked") {
         return css`
-          color: red;
+          background-color: red;
+          color: white;
         `;
       }
     }}}

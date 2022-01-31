@@ -58,7 +58,7 @@ const StyledMenu = styled.nav`
     justify-content: space-around;
     gap: 10px;
     border-radius: 40px;
-    background-color: #343b3b;
+    background-color: var(--container-bg-color);
   }
 `;
 
@@ -78,6 +78,6 @@ const MenuItem = styled(Link)<{ selected?: boolean }>`
     selected &&
     css`
       background-color: var(--main-bg-color);
-      color: var(--light-blue);
+      color: var(--white);
     `}
 `;

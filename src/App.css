@@ -1,10 +1,11 @@
 #root {
-  --main-bg-color: #232828;
-  --black: #36d8d8;
+  --main-bg-color: #36d8d8;
+  --black: #232828;
+  --main-color: #36d8d8;
   --white: white;
   --light-blue: #7aaefc;
-  --menu-bg-color: #343b3b;
-  --container-bg-color: #8c87cf;
+  --menu-bg-color: #6072dd;
+  --container-bg-color: #6072dd;
 }
 
 * {

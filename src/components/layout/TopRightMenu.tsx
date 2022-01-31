@@ -8,6 +8,7 @@ export const TopRightMenu = () => {
       <ul>
         <MenuItem>
           <Profil active />
+          Admin
         </MenuItem>
       </ul>
     </StyledTopRightMenu>
@@ -21,12 +22,17 @@ const StyledTopRightMenu = styled.nav`
 `;
 
 const MenuItem = styled.li`
-  background-color: var(--black);
+  background-color: var(--container-bg-color);
   border-radius: 50%;
   width: fit-content;
   height: auto;
   padding: 10px 15px;
   border: 2px var(--white) solid;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  font-size: 0.8rem;
   cursor: pointer;
   :hover {
     border: 2px var(--white) solid;
