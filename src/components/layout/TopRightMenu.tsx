@@ -23,6 +23,9 @@ const StyledTopRightMenu = styled.nav`
 
 const MenuItem = styled.li`
   background-color: var(--container-bg-color);
+  display: inline-block;
+  margin: 10px 0;
+  list-style: none;
   border-radius: 50%;
   width: fit-content;
   height: auto;

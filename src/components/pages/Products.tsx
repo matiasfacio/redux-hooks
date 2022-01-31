@@ -33,8 +33,8 @@ export const Products = () => {
   return (
     <CartContainer>
       <Title>Your cart</Title>
-      <div className="container">
-        <div className="products_available">
+      <ContentContainer>
+        <ProductsAvailable>
           {productsAvailable.map(({ id, name, price }) => {
             return (
               <Item key={name}>
@@ -45,8 +45,8 @@ export const Products = () => {
               </Item>
             );
           })}
-        </div>
-        <div className="cart">
+        </ProductsAvailable>
+        <Cart>
           {!cart.products.length ? (
             <p>your cart is empty</p>
           ) : (
@@ -55,17 +55,17 @@ export const Products = () => {
           <ul>
             {cart.products.map((product) => {
               return (
-                <li key={product.id}>
+                <CartItem key={product.id}>
                   {product.name}: {product.price}€ <br />
                   <button onClick={() => deleteProduct(product.id)}>
                     delete
                   </button>
-                </li>
+                </CartItem>
               );
             })}
           </ul>
-        </div>
-      </div>
+        </Cart>
+      </ContentContainer>
     </CartContainer>
   );
 };
@@ -73,6 +73,31 @@ export const Products = () => {
 const CartContainer = styled.section`
   display: flex;
   flex-direction: column;
+`;
+
+const ContentContainer = styled.div`
+  width: 50vw;
+  border-radius: 40px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "productsAvailable productsAvailable cart cart";
+  background-color: var(--container-bg-color);
+  color: white;
+  font-weight: 500;
+  box-shadow: var(--container-shadow);
+`;
+
+const ProductsAvailable = styled.div`
+  grid-area: productsAvailable;
+`;
+
+const Cart = styled.div`
+  grid-area: cart;
+  padding: 20px;
+  box-shadow: 0 0 10px #4a5555;
+  border-radius: 40px;
+}
 `;
 
 const Item = styled.div`
@@ -88,4 +113,11 @@ const Item = styled.div`
   :hover {
     transform: translateY(-2px);
   }
+`;
+
+const CartItem = styled.li`
+  display: inline-block;
+  margin: 10px 0;
+  list-style: none;
+  padding: 0 50px;
 `;
