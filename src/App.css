@@ -1,10 +1,10 @@
 #root {
   --main-bg-color: #232828;
-  --black: #232828;
+  --black: #36d8d8;
   --white: white;
   --light-blue: #7aaefc;
   --menu-bg-color: #343b3b;
-  --container-bg-color: #343b3b;
+  --container-bg-color: #8c87cf;
 }
 
 * {
@@ -18,7 +18,7 @@ body {
   place-content: center;
   background-image: url("./images/image.svg");
   background-size: cover;
-  background-color: #232828;
+  background-color: #36d8d8;
   overflow-x: hidden;
 }
 
