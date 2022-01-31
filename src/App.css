@@ -38,7 +38,7 @@ a {
   width: 100vw;
   flex-direction: row;
   gap: 50px;
-  padding: 3rem;
+  padding: 2rem 2rem 0 2rem;
 }
 
 button {
@@ -48,7 +48,8 @@ button {
   border-radius: 10px;
   background-color: #7aaefc;
   padding: 10px 20px;
-  text-transform: capitalize;
+  text-transform: uppercase;
   cursor: pointer;
   color: white;
+  font-weight: 700;
 }

@@ -247,7 +247,7 @@ const Form = styled.form`
 `;
 
 const FormItem = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -299,9 +299,13 @@ const ErrorOnItem = styled.div`
 `;
 
 const DisplayBooking = styled.div`
+  max-width: 200px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+
   p {
     padding-bottom: 10px;
+    font-size: 0.8rem;
   }
 `;

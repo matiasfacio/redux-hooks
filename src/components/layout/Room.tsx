@@ -18,13 +18,17 @@ interface RoomProps {
   }) => void;
 }
 
+const EmptyCheckBox = () => <div style={{ width: 10, height: 20 }}></div>;
+
 export const Room: VFC<RoomProps> = ({ roomName, date, onChange }) => {
   const findDate: CalendarDate[] = CalendarApi.getCalendarOfDay(date!);
 
   return (
     <StyledRoomContainer>
-      <StyledRoom>Calendar for {roomName}</StyledRoom>
-      <Date>Date: {date}</Date>
+      <StyledRoom>
+        Calendar for {roomName}
+        <Date>Date: {date}</Date>
+      </StyledRoom>
       <RoomCalendar>
         {findDate.length > 0 ? (
           <>
@@ -33,12 +37,15 @@ export const Room: VFC<RoomProps> = ({ roomName, date, onChange }) => {
                 <CalendarLine key={day.time}>
                   <DateTime status={day.state}>{day.time}</DateTime>
                   <StatusTag status={day.state}>{day.state}</StatusTag>
-                  {day.state === "available" && (
+                  <p>{day.price}€</p>
+                  {day.state === "available" ? (
                     <input
                       type="checkbox"
                       onChange={(e) => onChange({ event: e, date })}
                       name={day.time}
                     />
+                  ) : (
+                    <EmptyCheckBox />
                   )}
                 </CalendarLine>
               );
@@ -53,6 +60,7 @@ export const Room: VFC<RoomProps> = ({ roomName, date, onChange }) => {
 };
 
 const StyledRoomContainer = styled.div`
+  margin-top: 70px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -60,11 +68,15 @@ const StyledRoomContainer = styled.div`
 
 const StyledRoom = styled.div`
   color: white;
+  background-color: var(--container-bg-color);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--container-shadow);
 `;
 
 const RoomCalendar = styled.div`
   height: auto;
-  width: 250px;
+  width: 300px;
   background-color: var(--container-bg-color);
   border-radius: 40px;
   color: white;
@@ -82,6 +94,7 @@ const RoomCalendar = styled.div`
 
 const Date = styled.div`
   color: white;
+  margin-top: 10px;
 `;
 
 const CalendarLine = styled.div`
@@ -99,6 +112,8 @@ const StatusTag = styled.p<{ status: CalendarTime["state"] }>`
     border-radius: 10px;
     font-size: 0.8rem;
     padding: 0;
+    width: 80px;
+    text-align: center;
     ${({ status }) => {
       if (status === "pending") {
         return css`

@@ -1,6 +1,7 @@
 export interface CalendarTime {
   time: string;
   state: "booked" | "available" | "pending";
+  price: number;
   client: any;
 }
 
@@ -18,51 +19,61 @@ const Calendar: CalendarApiProps = [
       {
         time: "08:30 - 10:00",
         state: "pending",
+        price: 36,
         client: {},
       },
       {
         time: "10:30 - 12:00",
         state: "available",
+        price: 36,
         client: {},
       },
       {
         time: "12:00 - 13:30",
         state: "available",
+        price: 36,
         client: {},
       },
       {
         time: "13:30 - 15:00",
         state: "booked",
+        price: 36,
         client: {},
       },
       {
         time: "15:00 - 16:30",
         state: "available",
+        price: 36,
         client: {},
       },
       {
         time: "16:30 - 18:00",
         state: "available",
+        price: 36,
         client: {},
       },
       {
         time: "18:00 - 19:30",
         state: "available",
+        price: 48,
         client: {},
       },
       {
         time: "19:30 - 21:00",
         state: "available",
+        price: 48,
         client: {},
       },
       {
         time: "21:00 - 22:30",
         state: "available",
+        price: 48,
         client: {},
       },
       {
         time: "22:30 - 24:00",
         state: "available",
+        price: 48,
         client: {},
       },
     ],
@@ -73,51 +84,61 @@ const Calendar: CalendarApiProps = [
       {
         time: "08:30 - 10:00",
         state: "booked",
+        price: 36,
         client: {},
       },
       {
         time: "10:30 - 12:00",
         state: "available",
+        price: 36,
         client: {},
       },
       {
         time: "12:00 - 13:30",
         state: "available",
+        price: 36,
         client: {},
       },
       {
         time: "13:30 - 15:00",
         state: "booked",
+        price: 36,
         client: {},
       },
       {
         time: "15:00 - 16:30",
         state: "available",
+        price: 36,
         client: {},
       },
       {
         time: "16:30 - 18:00",
         state: "available",
+        price: 48,
         client: {},
       },
       {
         time: "18:00 - 19:30",
         state: "available",
+        price: 48,
         client: {},
       },
       {
         time: "19:30 - 21:00",
         state: "available",
+        price: 48,
         client: {},
       },
       {
         time: "21:00 - 22:30",
         state: "available",
+        price: 48,
         client: {},
       },
       {
         time: "22:30 - 24:00",
         state: "available",
+        price: 48,
         client: {},
       },
     ],
@@ -128,51 +149,61 @@ const Calendar: CalendarApiProps = [
       {
         time: "08:30 - 10:00",
         state: "available",
+        price: 36,
         client: {},
       },
       {
         time: "10:30 - 12:00",
         state: "booked",
+        price: 36,
         client: {},
       },
       {
         time: "12:00 - 13:30",
         state: "available",
+        price: 36,
         client: {},
       },
       {
         time: "13:30 - 15:00",
         state: "booked",
+        price: 36,
         client: {},
       },
       {
         time: "15:00 - 16:30",
         state: "available",
+        price: 36,
         client: {},
       },
       {
         time: "16:30 - 18:00",
         state: "available",
+        price: 36,
         client: {},
       },
       {
         time: "18:00 - 19:30",
         state: "available",
+        price: 48,
         client: {},
       },
       {
         time: "19:30 - 21:00",
         state: "available",
+        price: 48,
         client: {},
       },
       {
         time: "21:00 - 22:30",
         state: "available",
+        price: 48,
         client: {},
       },
       {
         time: "22:30 - 24:00",
         state: "available",
+        price: 48,
         client: {},
       },
     ],
@@ -185,51 +216,61 @@ export const addNewDayToCalendar: CalendarDate = {
     {
       time: "08:30 - 10:00",
       state: "available",
+      price: 36,
       client: {},
     },
     {
       time: "10:30 - 12:00",
       state: "available",
+      price: 36,
       client: {},
     },
     {
       time: "12:00 - 13:30",
       state: "available",
+      price: 36,
       client: {},
     },
     {
       time: "13:30 - 15:00",
       state: "available",
+      price: 36,
       client: {},
     },
     {
       time: "15:00 - 16:30",
       state: "available",
+      price: 36,
       client: {},
     },
     {
       time: "16:30 - 18:00",
       state: "available",
+      price: 36,
       client: {},
     },
     {
       time: "18:00 - 19:30",
       state: "available",
+      price: 48,
       client: {},
     },
     {
       time: "19:30 - 21:00",
       state: "available",
+      price: 48,
       client: {},
     },
     {
       time: "21:00 - 22:30",
       state: "available",
+      price: 48,
       client: {},
     },
     {
       time: "22:30 - 24:00",
       state: "available",
+      price: 48,
       client: {},
     },
   ],

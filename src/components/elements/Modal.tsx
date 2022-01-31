@@ -31,7 +31,7 @@ const StyledModal = styled.div<{ visible: boolean }>`
 
 const ModalContent = styled.div`
   height: 200px;
-  width: 300px;
+  width: clamp(300px, 35vw, 600px);
   background-color: var(--container-bg-color);
   border-radius: 10px;
   box-shadow: var(--container-shadow);
