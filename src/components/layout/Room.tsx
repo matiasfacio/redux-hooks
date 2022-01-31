@@ -60,7 +60,7 @@ export const Room: VFC<RoomProps> = ({ roomName, date, onChange }) => {
 };
 
 const StyledRoomContainer = styled.div`
-  margin-top: 70px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -118,18 +118,18 @@ const StatusTag = styled.p<{ status: CalendarTime["state"] }>`
       if (status === "pending") {
         return css`
           color: black;
-          background-color: yellow;
+          background-color: #afaf49;
         `;
       }
       if (status === "available") {
         return css`
-          background-color: green;
+          background-color: #086960;
           color: white;
         `;
       }
       if (status === "booked") {
         return css`
-          background-color: red;
+          background-color: #ac4646;
           color: white;
         `;
       }

@@ -254,6 +254,7 @@ const FormItem = styled.div`
   padding: 10px;
   align-items: center;
   color: white;
+  font-size: 1rem;
   label {
     width: 240px;
   }

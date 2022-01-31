@@ -49,7 +49,7 @@ export const Menu = () => {
 };
 
 const StyledMenu = styled.nav`
-  height: 400px;
+  height: 300px;
 
   ul {
     padding: 20px;
@@ -59,20 +59,20 @@ const StyledMenu = styled.nav`
     justify-content: space-around;
     gap: 10px;
     border-radius: 40px;
-    background-color: var(--container-bg-color);
+    background-color: var(--menu-bg-color);
     box-shadow: var(--container-shadow);
   }
 `;
 
 const MenuItem = styled(Link)<{ selected?: boolean }>`
   border-radius: 20px;
-  padding: 1rem;
+  padding: 0.8rem;
   width: 150px;
   color: white;
-  font-weight: 700;
-  background-color: #7aaefc;
+  font-weight: 600;
   text-align: left;
-  text-transform: uppercase;
+  text-transform: capitalize;
+  font-size: 0.8rem;
 
   :active {
     background-color: var(--main-bg-color);

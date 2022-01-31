@@ -28,4 +28,8 @@ const CounterContainer = styled.section`
   display: flex;
   flex-direction: column;
   color: white;
+  background-color: var(--container-bg-color);
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: var(--container-shadow);
 `;

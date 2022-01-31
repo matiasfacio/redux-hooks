@@ -6,7 +6,7 @@ export const Title: FC = ({ children }) => {
 };
 
 const StyledTitle = styled.div`
-  font-size: 1.5rem;
+  font-size: 1rem;
   margin: 0 0 20px 0;
   padding: 10px 20px;
   border-radius: 15px;
