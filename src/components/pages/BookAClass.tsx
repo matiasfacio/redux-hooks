@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Title } from "../elements/Title";
 import { Modal } from "../elements/Modal";
 import { Room } from "../layout/Room";
+import { time } from "console";
 
 const today = new Date();
 const twoWeeks = new Date(today.setDate(today.getDate() + 14));
@@ -25,6 +26,7 @@ interface TimeProps {
 
 export const BookAClass = () => {
   const [error, setError] = React.useState<{ date: boolean }>({ date: false });
+  const [correctDate, setCorrectDate] = React.useState<boolean>(true);
   const [modalErrorVisibility, setModalErrorVisibility] =
     React.useState<boolean>(false);
   const [formInput, setFormInput] = React.useState({
@@ -42,9 +44,11 @@ export const BookAClass = () => {
     const booking = new Date(e.target.value);
     if (booking > twoWeeks) {
       setError({ date: true });
+      setCorrectDate(false);
     } else {
       setError({ date: false });
       onUpdateInput(e);
+      setCorrectDate(true);
     }
   };
 
@@ -129,6 +133,22 @@ export const BookAClass = () => {
             </select>
           </FormItem>
           <FormItem>
+            {formInput.time.length > 0 && (
+              <>
+                <label>Your booking</label>
+                <DisplayBooking>
+                  {formInput.time.map((timeSlot) => {
+                    return (
+                      <p>
+                        {timeSlot.date}: {timeSlot.time}
+                      </p>
+                    );
+                  })}
+                </DisplayBooking>
+              </>
+            )}
+          </FormItem>
+          <FormItem>
             <label>
               Name <pre>(required)</pre>
             </label>
@@ -199,11 +219,13 @@ export const BookAClass = () => {
           You can only book a class within the next 14 days.
         </Modal>
       )}
-      <Room
-        roomName={formInput.room || "Room 1"}
-        date={formInput.date}
-        onChange={({ event, date }) => onTimeUpdate(event, date)}
-      />
+      {correctDate && (
+        <Room
+          roomName={formInput.room || "Room 1"}
+          date={formInput.date}
+          onChange={({ event, date }) => onTimeUpdate(event, date)}
+        />
+      )}
     </>
   );
 };
@@ -267,4 +289,12 @@ const ErrorOnItem = styled.div`
   display: block;
   color: red;
   font-size: 0.8rem;
+`;
+
+const DisplayBooking = styled.div`
+  display: flex;
+  flex-direction: column;
+  p {
+    padding-bottom: 10px;
+  }
 `;
