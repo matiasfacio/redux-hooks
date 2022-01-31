@@ -10,6 +10,7 @@ export const Modal: FC<ModalProps> = ({ children, visible, onClose }) => {
   return (
     <StyledModal visible={visible}>
       <ModalContent>
+        <CloseModalButton onClick={onClose}>X</CloseModalButton>
         <ModalTitle>Information</ModalTitle>
         <Message>{children}</Message>
         <Footer>
@@ -31,21 +32,34 @@ const StyledModal = styled.div<{ visible: boolean }>`
 const ModalContent = styled.div`
   height: 200px;
   width: 300px;
-  background-color: white;
+  background-color: var(--container-bg-color);
   border-radius: 10px;
-  box-shadow: 0 0 5px var(--white);
+  box-shadow: var(--container-shadow);
   position: relative;
+`;
+
+const CloseModalButton = styled.div`
+  position: absolute;
+  content: "X";
+  top: -10px;
+  right: -10px;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
 `;
 
 const ModalTitle = styled.div`
   border-bottom: 1px var(--light-blue) solid;
   padding: 10px;
   font-size: 0.9rem;
+  color: white;
 `;
 
 const Message = styled.div`
   padding: 10px;
   font-size: 0.9rem;
+  color: white;
 `;
 
 const Footer = styled.div`
