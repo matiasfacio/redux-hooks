@@ -28,6 +28,8 @@ export const BookAClass = () => {
   const [correctDate, setCorrectDate] = React.useState<boolean>(true);
   const [modalErrorVisibility, setModalErrorVisibility] =
     React.useState<boolean>(false);
+  const [modalConfirmationVisibility, setModalConfirmationVisibility] =
+    React.useState<boolean>(false);
   const [formInput, setFormInput] = React.useState({
     date: getTodaysDate(),
     time: [] as TimeProps[],
@@ -80,7 +82,7 @@ export const BookAClass = () => {
   };
 
   const onSubmit = () => {
-    console.log(formInput);
+    setModalConfirmationVisibility(true);
   };
 
   return (
@@ -93,11 +95,8 @@ export const BookAClass = () => {
             if (error.date) {
               setModalErrorVisibility(true);
             } else {
-              alert(
-                "Your request will be processed soon. You will get a confirmation email in the specified email address. Thank you for playing with us!"
-              );
+              onSubmit();
             }
-            onSubmit();
           }}
         >
           <FormItem>
@@ -216,6 +215,15 @@ export const BookAClass = () => {
           onClose={() => setModalErrorVisibility(false)}
         >
           You can only book a class within the next 14 days.
+        </Modal>
+      )}
+      {modalConfirmationVisibility && (
+        <Modal
+          visible={modalConfirmationVisibility}
+          onClose={() => setModalConfirmationVisibility(false)}
+        >
+          Your request will be processed. Soon you will get a confirmation email
+          on the given email address. Thank you for playing with us!
         </Modal>
       )}
       {correctDate && (
