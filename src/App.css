@@ -39,29 +39,6 @@ a {
   padding: 3rem;
 }
 
-.container {
-  width: 50vw;
-  border-radius: 40px;
-  padding: 20px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "productsAvailable productsAvailable cart cart";
-  background-color: var(--container-bg-color);
-  color: white;
-  font-weight: 500;
-}
-
-.products_available {
-  grid-area: productsAvailable;
-}
-
-.cart {
-  grid-area: cart;
-  padding: 20px;
-  box-shadow: 0 0 10px #4a5555;
-  border-radius: 40px;
-}
-
 button {
   max-width: fit-content;
   margin: 10px;
@@ -72,11 +49,4 @@ button {
   text-transform: capitalize;
   cursor: pointer;
   color: white;
-}
-
-li {
-  display: inline-block;
-  margin: 10px 0;
-  list-style: none;
-  padding: 0 50px;
 }

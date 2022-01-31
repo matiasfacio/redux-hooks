@@ -21,6 +21,9 @@ const StyledTopRightMenu = styled.nav`
 `;
 
 const MenuItem = styled.li`
+  display: inline-block;
+  margin: 10px 0;
+  list-style: none;
   background-color: var(--black);
   border-radius: 50%;
   width: fit-content;
