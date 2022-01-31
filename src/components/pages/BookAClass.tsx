@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Title } from "../elements/Title";
 import { Modal } from "../elements/Modal";
 import { Room } from "../layout/Room";
-import { time } from "console";
 
 const today = new Date();
 const twoWeeks = new Date(today.setDate(today.getDate() + 14));
