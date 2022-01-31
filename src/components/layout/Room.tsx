@@ -72,6 +72,7 @@ const RoomCalendar = styled.div`
   display: flex;
   flex-direction: column;
   padding: 20px 10px;
+  box-shadow: var(--container-shadow);
 
   p {
     padding: 5px;

@@ -214,6 +214,7 @@ const Form = styled.form`
   background-color: var(--container-bg-color);
   padding: 10px;
   border-radius: 40px;
+  box-shadow: var(--container-shadow);
 `;
 
 const FormItem = styled.div`

@@ -50,6 +50,7 @@ export const Menu = () => {
 
 const StyledMenu = styled.nav`
   height: 400px;
+
   ul {
     padding: 20px;
     display: flex;
@@ -59,6 +60,7 @@ const StyledMenu = styled.nav`
     gap: 10px;
     border-radius: 40px;
     background-color: var(--container-bg-color);
+    box-shadow: var(--container-shadow);
   }
 `;
 
@@ -71,6 +73,7 @@ const MenuItem = styled(Link)<{ selected?: boolean }>`
   background-color: #7aaefc;
   text-align: left;
   text-transform: uppercase;
+
   :active {
     background-color: var(--main-bg-color);
   }

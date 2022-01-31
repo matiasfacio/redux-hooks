@@ -32,7 +32,7 @@ const MenuItem = styled.li`
   flex-direction: column;
   color: white;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   cursor: pointer;
   :hover {
     border: 2px var(--white) solid;

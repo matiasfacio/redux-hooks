@@ -6,6 +6,7 @@
   --light-blue: #7aaefc;
   --menu-bg-color: #6072dd;
   --container-bg-color: #6072dd;
+  --container-shadow: 5px 5px 10px #414f9b;
 }
 
 * {
@@ -50,6 +51,7 @@ a {
   background-color: var(--container-bg-color);
   color: white;
   font-weight: 500;
+  box-shadow: var(--container-shadow);
 }
 
 .products_available {
