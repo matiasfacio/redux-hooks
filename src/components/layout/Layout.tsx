@@ -6,6 +6,7 @@ import { Products } from "../pages/Products";
 import { BookAClass } from "../pages/BookAClass";
 import { Home } from "../pages/Home";
 import { TopRightMenu } from "./TopRightMenu";
+import { About } from "./About";
 
 export const Layout = () => {
   return (
@@ -17,6 +18,7 @@ export const Layout = () => {
         <Route path="counter" element={<Counter />} />
         <Route path="cart" element={<Products />} />
         <Route path="bookaclass" element={<BookAClass />} />
+        <Route path="about" element={<About />} />
       </Routes>
     </>
   );

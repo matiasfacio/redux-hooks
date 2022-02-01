@@ -1,17 +1,24 @@
 import React from "react";
 import { Profil } from "../images/Profil";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const TopRightMenu = () => {
   return (
-    <StyledTopRightMenu>
-      <ul>
-        <MenuItem>
-          <Profil active />
-          Admin
-        </MenuItem>
-      </ul>
-    </StyledTopRightMenu>
+    <>
+      <StyledTopRightMenu>
+        <ul>
+          <MenuItem to="/">
+            <Profil active />
+            Admin
+          </MenuItem>
+          <MenuItem to="/about">
+            <Profil active />
+            About
+          </MenuItem>
+        </ul>
+      </StyledTopRightMenu>
+    </>
   );
 };
 
@@ -21,7 +28,7 @@ const StyledTopRightMenu = styled.nav`
   right: 2vw;
 `;
 
-const MenuItem = styled.li`
+const MenuItem = styled(Link)`
   background-color: var(--container-bg-color);
   display: inline-block;
   margin: 10px 0;
