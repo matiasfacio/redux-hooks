@@ -8,7 +8,7 @@ export const TopRightMenu = () => {
     <>
       <StyledTopRightMenu>
         <ul>
-          <MenuItem to="/">
+          <MenuItem to="/admin">
             <Profil active />
             Admin
           </MenuItem>
@@ -44,7 +44,8 @@ const MenuItem = styled(Link)`
   align-items: center;
   font-size: 0.6rem;
   cursor: pointer;
+  transition: all 250ms ease-in-out;
   :hover {
-    border: 2px var(--white) solid;
+    transform: scale(1.04);
   }
 `;

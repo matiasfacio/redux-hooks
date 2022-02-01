@@ -7,6 +7,7 @@ import { BookAClass } from "../pages/BookAClass";
 import { Home } from "../pages/Home";
 import { TopRightMenu } from "./TopRightMenu";
 import { About } from "./About";
+import { Admin } from "./Admin";
 
 export const Layout = () => {
   return (
@@ -19,6 +20,7 @@ export const Layout = () => {
         <Route path="cart" element={<Products />} />
         <Route path="bookaclass" element={<BookAClass />} />
         <Route path="about" element={<About />} />
+        <Route path="admin" element={<Admin />} />
       </Routes>
     </>
   );

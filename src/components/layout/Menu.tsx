@@ -74,7 +74,8 @@ const MenuItem = styled(Link)<{ selected?: boolean }>`
   text-transform: capitalize;
   font-size: 0.8rem;
 
-  :active {
+  :active,
+  :hover {
     background-color: var(--main-bg-color);
   }
   ${({ selected }) =>
