@@ -50,7 +50,7 @@ const CloseModalButton = styled.div`
 `;
 
 const ModalTitle = styled.div`
-  border-bottom: 1px var(--light-blue) solid;
+  border-bottom: 1px var(--main-color) solid;
   padding: 10px;
   font-size: 0.9rem;
   color: white;
@@ -69,6 +69,6 @@ const Footer = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-end;
-  border-top: 1px var(--light-blue) solid;
+  border-top: 1px var(--main-color) solid;
 `;
 const Button = styled.button``;

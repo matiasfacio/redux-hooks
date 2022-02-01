@@ -59,4 +59,5 @@ const Close = styled.div`
   color: white;
   font-weight: 900;
   font-size: 1.5rem;
+  cursor: pointer;
 `;
