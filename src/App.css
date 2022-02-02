@@ -5,8 +5,9 @@
   --white: white;
   --light-blue: #7aaefc;
   --menu-bg-color: #434449;
-  --container-bg-color: #434449;
-  --container-shadow: 5px 5px 10px #35353a;
+  --container-bg-color: #586666;
+  --card-bg-color: #aefafa;
+  --container-shadow: -100px 100px 10px #35353a1a;
 }
 
 * {
