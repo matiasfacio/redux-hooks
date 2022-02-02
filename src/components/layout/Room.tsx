@@ -60,7 +60,6 @@ export const Room: VFC<RoomProps> = ({ roomName, date, onChange }) => {
 };
 
 const StyledRoomContainer = styled.div`
-  margin-top: 60px;
   display: flex;
   flex-direction: column;
   gap: 20px;

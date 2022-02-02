@@ -83,9 +83,6 @@ const TeacherContainerCard = styled.article`
   font-size: 0.9rem;
   transition: all 250ms ease-in-out;
   line-height: 1.5;
-  &:hover {
-    transform: translateY(-5px);
-  }
 `;
 
 const Email = styled.div<{ beforeText: string }>`

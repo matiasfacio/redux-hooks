@@ -59,13 +59,13 @@ const StyledMenu = styled.nav`
   height: 300px;
 
   ul {
-    padding: 10px;
+    padding: 20px 10px;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-around;
     gap: 10px;
-    border-radius: 40px;
+    border-radius: 20px;
     background-color: var(--menu-bg-color);
     box-shadow: var(--container-shadow);
   }
