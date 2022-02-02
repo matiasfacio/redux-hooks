@@ -16,30 +16,37 @@ export const Menu = () => {
           Tango Libre
         </MenuItem>
         <MenuItem
-          to="/bookaclass"
+          to="/team"
           selected={selected === 2}
           onClick={() => setSelected(2)}
         >
-          Book a Group Class
+          Team
         </MenuItem>
         <MenuItem
-          to="/"
+          to="/bookaclass"
           selected={selected === 3}
           onClick={() => setSelected(3)}
         >
-          Book a Private Class
+          Book Group Class
+        </MenuItem>
+        <MenuItem
+          to="/"
+          selected={selected === 4}
+          onClick={() => setSelected(4)}
+        >
+          Book Private Class
         </MenuItem>
         <MenuItem
           to="/cart"
-          selected={selected === 4}
-          onClick={() => setSelected(4)}
+          selected={selected === 5}
+          onClick={() => setSelected(5)}
         >
           Shopping
         </MenuItem>
         <MenuItem
           to="/counter"
-          selected={selected === 5}
-          onClick={() => setSelected(5)}
+          selected={selected === 6}
+          onClick={() => setSelected(6)}
         >
           Counter
         </MenuItem>
@@ -52,7 +59,7 @@ const StyledMenu = styled.nav`
   height: 300px;
 
   ul {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -66,7 +73,7 @@ const StyledMenu = styled.nav`
 
 const MenuItem = styled(Link)<{ selected?: boolean }>`
   border-radius: 20px;
-  padding: 0.8rem;
+  padding: 0.7rem;
   width: 150px;
   color: white;
   font-weight: 600;

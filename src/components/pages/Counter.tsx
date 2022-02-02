@@ -12,19 +12,21 @@ export const Counter = () => {
   return (
     <CounterContainer>
       <Title>Counter</Title>
-      <div className="counter">
-        Count: {value}
-        <br />
-        <div>
-          <button onClick={incrementValue}>Increment</button>
-          <button onClick={addFive}>add 5</button>
+      <CounterContentContainer>
+        <div className="counter">
+          Count: {value}
+          <br />
+          <div>
+            <button onClick={incrementValue}>Increment</button>
+            <button onClick={addFive}>add 5</button>
+          </div>
         </div>
-      </div>
+      </CounterContentContainer>
     </CounterContainer>
   );
 };
 
-const CounterContainer = styled.section`
+const CounterContentContainer = styled.section`
   display: flex;
   flex-direction: column;
   color: white;
@@ -32,4 +34,9 @@ const CounterContainer = styled.section`
   border-radius: 40px;
   padding: 20px;
   box-shadow: var(--container-shadow);
+`;
+
+const CounterContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
