@@ -72,6 +72,7 @@ const StyledRoom = styled.div`
   border-radius: 20px;
   padding: 20px;
   box-shadow: var(--container-shadow);
+  font-weight: 700;
 `;
 
 const RoomCalendar = styled.div`

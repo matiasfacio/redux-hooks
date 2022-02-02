@@ -6,8 +6,8 @@ import { Products } from "../pages/Products";
 import { BookAClass } from "../pages/BookAClass";
 import { Home } from "../pages/Home";
 import { TopRightMenu } from "./TopRightMenu";
-import { About } from "./About";
-import { Admin } from "./Admin";
+import { About } from "../pages/About";
+import { Admin } from "../pages/Admin";
 
 export const Layout = () => {
   return (
