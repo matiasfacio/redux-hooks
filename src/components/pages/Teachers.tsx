@@ -104,11 +104,12 @@ const TeacherNames = styled(Email)``;
 const Phone = styled(Email)``;
 
 const PictureContainer = styled.div<{ pic: string }>`
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   flex-shrink: 0;
-  border-radius: 50%;
+  border-radius: 10%;
   overflow: hidden;
+  box-shadow: -100px 100px 10px #2525291a;
   ${({ pic }) => {
     switch (pic) {
       case "Matias":
@@ -124,8 +125,9 @@ const PictureContainer = styled.div<{ pic: string }>`
 const TeacherInfoContainer = styled.div`
   margin: 10px;
   height: 100%;
-  display: flex,
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: space-around;
+  padding: 20px;
 `;

@@ -94,10 +94,12 @@ const ProductsAvailable = styled.div`
 
 const Cart = styled.div`
   grid-area: cart;
-  padding: 20px;
-  box-shadow: 0 0 10px #4a5555;
+  height: 300px;
+  padding: 25px;
   border-radius: 40px;
-}
+  box-shadow: inset 10px 10px 15px #3c3d3b89;
+  position: relative;
+  overflow: hidden;
 `;
 
 const Item = styled.div`
